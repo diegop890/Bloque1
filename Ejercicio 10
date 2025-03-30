@@ -1,1 +1,71 @@
-# Bloque1
+#include <stdio.h>
+
+int main()
+{
+    int a = 4;
+    int b = 7;
+    
+    int resultadoSuma;
+    int resultadoResta;
+    int cociente;
+    int resto;
+    int resultadoLog10a;
+    int resultadoaElevadob;
+    char elegir; //S = suma, R = resta, D = divisón, L = Log10(a), E = a^b
+
+    do
+    {
+        printf("Introduzca S para sumar, R para restar, D para dividir, L para hacer Log10(a) y E para hacer a^b");
+        scanf("%c", &elegir);
+        fflush(stdin);
+    }
+    while(elegir != 'S' && elegir != 'R' && elegir != 'D' && elegir != 'L' && elegir != 'E');
+
+    if(elegir == 'S')
+    {
+        resultadoSuma = a + b;
+    
+        printf("Sumamos %d y %d", a, b);
+        printf("La suma da %d", resultadoSuma);
+    }
+
+    else if(elegir == 'R')
+    {
+        resultadoResta = a - b;
+    
+        printf("Restamos %d y %d", a, b);
+        printf("La resta da %d", resultadoResta);
+    }
+
+    else if(elegir == 'D')
+    {
+        cociente = a / b;
+        resto = a % b;
+    
+        printf("Dividimos %d entre %d\n", a, b);
+        printf("El cociente es %d y el resto es %d", cociente, resto);
+    }
+
+    else if(elegir == 'L')
+    {
+        resultadoLog10a = log10(a);
+    
+        printf("Hacemos log10(%d)", a);
+        printf("El resultado de la operación es %d", resultadoLog10a);
+    }
+
+    else if(elegir == 'E')
+    {
+        resultadoaElevadob = a ^ b;
+    
+        printf("Hacemos %d elevado a %d", a, b);
+        printf("El resultado de la operación es %d", resultadoaElevadob);
+    }
+    
+    else
+    {
+        printf("No has elegido S, R, D, L o E");
+    }
+    
+    return 0;
+}
