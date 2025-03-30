@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 
 int main()
 {
@@ -9,8 +10,8 @@ int main()
     int resultadoResta;
     int cociente;
     int resto;
-    int resultadoLog10a;
-    int resultadoaElevadob;
+    double resultadoLog10a;
+    double resultadoaElevadob;
     char elegir; //S = suma, R = resta, D = divisón, L = Log10(a), E = a^b
 
     do
@@ -56,7 +57,7 @@ int main()
 
     else if(elegir == 'E')
     {
-        resultadoaElevadob = a ^ b;
+        resultadoaElevadob = pow(a, b);
     
         printf("Hacemos %d elevado a %d", a, b);
         printf("El resultado de la operación es %d", resultadoaElevadob);
