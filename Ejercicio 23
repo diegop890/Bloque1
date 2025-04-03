@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+    float s;
+    int n;
+    float area;
+
+    printf("Introduce la longitud del lado (s): ");
+    scanf("%f", &s);
+    
+    printf("Introduce el número de lados (n): ");
+    scanf("%d", &n);
+
+    area = (n * s * s) / (4 * tan(M_PI / n));
+
+    printf("El área del polígono regular es: %.2f\n", area);
+
+    return 0;
+}
