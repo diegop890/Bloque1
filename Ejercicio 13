@@ -1,1 +1,55 @@
-m
+#include <stdio.h>
+
+int main()
+{
+    int cents;
+    
+    int toonies = cents / 200;
+    cents = cents % 200;
+    
+    int loonies = cents / 100;
+    cents = cents % 100;
+    
+    int quarters = cents / 25;
+    cents = cents % 25;
+    
+    int dimes = cents / 10;
+    cents = cents % 10;
+    
+    int nickels = cents / 5;
+    cents = cents % 5;
+    
+    int pennies = cents;
+    
+    printf("Introduce la cantidad en centavos: ");
+    scanf("%d", &cents);
+    
+    printf("Cambio: \n");
+    
+    if (toonies > 0)
+    {
+        printf("%d monedas de 2 dólares (toonie)\n", toonies);
+    }
+    if(loonies = 0)
+    {
+        printf("%d monedas de 1 dólar (loonie)\n", loonies);
+    }
+    if(quarters > 0)
+    {
+        printf("%d monedas de 25 centavos (quarter)\n", quarters);
+    }
+    if(dimes > 0)
+    {
+        printf("%d monedas de 10 centavos (dime)\n", dimes);
+    }
+    if(nickels > 0)
+    {
+        printf("%d monedas de 5 centavos (níquel)\n", nickels);
+    }
+    if(pennies > 0)
+    {
+        printf("%d monedas de 1 centavo (penny)\n", pennies);
+    }
+    
+    return 0;
+}
